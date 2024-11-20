@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>View Employee</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(to bottom right, #e3f2fd, #bbdefb);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .view-wrapper {
+            margin: 50px auto;
+            max-width: 600px;
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .view-title {
+            text-align: center;
+            font-weight: bold;
+            color: #1976d2;
+            margin-bottom: 20px;
+        }
+        .info-group {
+            margin-bottom: 15px;
+        }
+        .info-group label {
+            font-weight: bold;
+            color: #333;
+        }
+        .info-group p {
+            background-color: #e3f2fd;
+            padding: 10px;
+            border-radius: 8px;
+            color: #333;
+        }
+        .btn-back {
+            background-color: #6c757d;
+            color: white;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .btn-back:hover {
+            background-color: #5a6268;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="view-wrapper">
+        <h2 class="view-title">View Employee</h2>
+        <div class="info-group">
+            <label>ID:</label>
+            <p th:text="${employee.id}">1</p>
+        </div>
+        <div class="info-group">
+            <label>First Name:</label>
+            <p th:text="${employee.firstName}">John</p>
+        </div>
+        <div class="info-group">
+            <label>Last Name:</label>
+            <p th:text="${employee.lastName}">Doe</p>
+        </div>
+        <div class="info-group">
+            <label>Email:</label>
+            <p th:text="${employee.email}">john.doe@example.com</p>
+        </div>
+        <a href="/employees" class="btn btn-back"><i class="fas fa-arrow-left"></i> Back</a>
+    </div>
+</div>
+</body>
+</html>
